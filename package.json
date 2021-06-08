@@ -1,0 +1,15 @@
+{
+  "name": "florentratanavanh_3_02062021",
+  "version": "1.0.0",
+  "description": "P3 Sass et Animations",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css"
+  },
+  "keywords": [
+    "Openclassrooms",
+    "P3"
+  ],
+  "author": "Florent RATANAVANH",
+  "license": "ISC"
+}
