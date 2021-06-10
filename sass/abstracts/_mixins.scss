@@ -1,0 +1,9 @@
+@mixin heading-title {
+  padding-bottom: 10px;
+  font-family: "roboto bold";
+  font-size: $font-size-primary;
+}
+
+@mixin bloc-format {
+  padding: 50px 30px;
+}

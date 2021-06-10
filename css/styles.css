@@ -26,6 +26,7 @@ body {
   font-family: "roboto", "roboto bold", "shrikhand", Arial, Helvetica, sans-serif;
   font-size: 14px;
   width: 480px;
+  margin: 0 auto;
 }
 
 header {
@@ -35,7 +36,7 @@ header img {
   height: 30px;
   display: block;
   margin: 0px auto 0px;
-  padding: 10px;
+  padding: 20px;
   flex: 1;
   box-sizing: content-box;
 }
@@ -47,39 +48,46 @@ header div {
 
 .search {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: block;
   height: 50px;
-  background-color: #e9e6e6;
+  background-color: #eaeaea;
+  position: relative;
 }
 .search__input {
   height: 50px;
   display: block;
   margin: 0 auto;
-  background-color: #e9e6e6;
-  font-size: 1.2rem;
+  background-color: #eaeaea;
+  font-size: 1.1rem;
   text-align: center;
   border: none;
 }
+.search__logo {
+  position: absolute;
+  top: 14px;
+  left: 160px;
+  font-size: 1.2rem;
+}
 
 .board {
-  background: #f9f6f6;
-  height: 280px;
+  background: #f6f6f6;
+  padding: 60px 0;
 }
 .board__title {
-  padding: 50px 60px 20px;
+  padding: 0px 60px 20px;
   text-align: center;
   font-size: 1.6rem;
+  font-family: "roboto bold";
 }
 .board__prg {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   padding: 0px 30px 20px;
   text-align: center;
   color: #808080;
 }
 .board__button {
-  background: #ff79da;
-  padding: 10px;
+  background: #dd6eda;
+  padding: 20px 20px;
   font-size: 1.2rem;
   border: #ff79da 1px solid;
   border-radius: 50px;
@@ -88,6 +96,147 @@ header div {
   display: block;
   margin: 0px auto;
   font-family: "roboto";
+}
+
+main {
+  background: #f6f6f6;
+  padding: 50px 30px;
+}
+main h1 {
+  padding-bottom: 10px;
+  font-family: "roboto bold";
+  font-size: 1.6rem;
+}
+
+.restaurants__container {
+  background: #f6f6f6;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.restaurants {
+  flex: 1;
+  width: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+  border: #dad6d6 1px solid;
+  text-decoration: none;
+  position: relative;
+}
+.restaurants__frame {
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurants__img {
+  width: 420px;
+  object-fit: contain;
+  object-position: 0px -67px;
+}
+.restaurants__legend {
+  height: 80px;
+  text-decoration: none;
+}
+.restaurants h2 {
+  font-family: "roboto bold";
+  padding: 15px 10px 0px;
+  font-size: 1.3rem;
+  color: #000000;
+}
+.restaurants__location {
+  padding: 0px 10px;
+  font-size: 1.3rem;
+  color: #000000;
+}
+.restaurants__logo {
+  position: absolute;
+  right: 25px;
+  bottom: 27px;
+  font-size: 1.6rem;
+}
+.restaurants .restaurants__portrait {
+  object-position: 0px -188px;
+}
+.restaurants__new {
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  padding: 5px 10px;
+  background: #99e2d0;
+  color: #008766;
+  border: #99e2d0 1px solid;
+  font-size: 1.1rem;
+}
+
+nav {
+  padding: 50px 30px;
+}
+nav h1 {
+  padding-bottom: 10px;
+  font-family: "roboto bold";
+  font-size: 1.6rem;
+}
+nav li {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.functionning__wrapper {
+  list-style: none;
+}
+.functionning__btn {
+  margin: 20px auto;
+  padding: 30px 0px;
+  border-radius: 50px;
+  position: relative;
+  width: 400px;
+  background: #f6f6f6;
+}
+.functionning__number {
+  border: solid 1px #9356dc;
+  background: #9356dc;
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 100px;
+  padding: 0px 7px;
+  position: absolute;
+  left: -5px;
+  top: 30px;
+}
+.functionning__logo {
+  color: grey;
+  position: absolute;
+  left: 50px;
+  top: 32px;
+  font-size: 1.4rem;
+}
+
+.footer {
+  background: #353535;
+  color: white;
+  padding: 20px 35px 40px;
+  list-style: none;
+}
+.footer__title {
+  font-family: "shrikhand";
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+}
+.footer__info {
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+.footer__ustensils {
+  padding-right: 15px;
+}
+.footer__hands {
+  padding-right: 5px;
+}
+.footer__contact {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

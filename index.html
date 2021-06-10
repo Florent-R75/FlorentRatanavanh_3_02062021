@@ -28,7 +28,7 @@
 
     <div class="search">
 
-      <i class="fas fa-map-marker-alt"></i>
+      <i class="fas fa-map-marker-alt search__logo"></i>
       <form action="text" class="search__form">
 
         <input type="text" class="search__input">
@@ -64,11 +64,14 @@
 
       <ol class="functionning__wrapper">
 
-        <li class="functionning__choose"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+        <li class="functionning__choose functionning__btn"><span class="functionning__number">1</span><i
+            class="fas fa-mobile-alt functionning__logo"></i>Choisissez un restaurant</li>
 
-        <li class="functionning__compose"><i class="fas fa-list-ul"></i>Composez votre menu</li>
+        <li class="functionning__compose functionning__btn"><span class="functionning__number">2</span><i
+            class="fas fa-list-ul functionning__logo"></i>Composez votre menu</li>
 
-        <li class="functionning__taste"><i class="fas fa-store"></i>Dégustez au restaurant</li>
+        <li class="functionning__taste functionning__btn"><span class="functionning__number">3</span><i
+            class="fas fa-store functionning__logo"></i>Dégustez au restaurant</li>
 
       </ol>
 
@@ -83,13 +86,21 @@
 
     <h1 class="restaurants__title">Restaurants</h1>
 
-    <v class="restaurants__container">
+    <div class="restaurants__container">
 
       <!-- 1er Restaurant -->
 
-      <a href="#" class="menu1">
 
-        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+
+
+
+      <a href="#" class="restaurants">
+
+        <div class="restaurants__frame">
+          <img class="restaurants__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt="restaurant__picture">
+        </div>
+
 
         <ul class="restaurants__legend">
 
@@ -97,18 +108,28 @@
             <h2>La palette du goût</h2>
           </li>
 
-          <li class="s2">Ménimoltant</li>
+          <li class="restaurants__location">Ménimoltant</li>
 
         </ul>
 
-        <i class="far fa-heart"></i>
+        <i class="far fa-heart restaurants__logo"></i>
+      
+        <div class="restaurants__new">Nouveau</div>
+      
+      
       </a>
+
+
 
       <!-- 2e Restaurant -->
 
-      <a href="#" class="menu1">
+      <a href="#" class="restaurants">
+        <div class="restaurants__frame">
 
-        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+          <img class="restaurants__img restaurants__portrait" src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+            alt="restaurant__picture">
+        </div>
+
 
         <ul class="restaurants__legend">
 
@@ -116,37 +137,52 @@
             <h2>La note enchantée</h2>
           </li>
 
-          <li class="s2">Charonne</li>
+          <li class="restaurants__location">Charonne</li>
 
         </ul>
 
-        <i class="far fa-heart"></i>
+        <i class="far fa-heart restaurants__logo"></i>
+      <div class="restaurants__new">Nouveau</div>
+      
+      
       </a>
 
       <!-- 3e Restaurant -->
 
-      <a href="#" class="menu1">
+      <a href="#" class="restaurants">
 
-        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+        <div class="restaurants__frame">
+          <img class="restaurants__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            alt="restaurant__picture">
+
+
+        </div>
+
 
         <ul class="restaurants__legend">
 
           <li>
-            <h2>A la française</h2>
+            <h2>À la française</h2>
           </li>
 
-          <li class="s2">Cité Rouge</li>
+          <li class="restaurants__location">Cité Rouge</li>
 
         </ul>
 
-        <i class="far fa-heart"></i>
+        <i class="far fa-heart restaurants__logo"></i>
       </a>
 
       <!-- 4e Restaurant -->
 
-      <a href="#" class="menu1">
+      <a href="#" class="restaurants">
 
-        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+        <div class="restaurants__frame">
+
+          <img class="restaurants__img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+            alt="restaurant__picture">
+        </div>
+
+
 
         <ul class="restaurants__legend">
 
@@ -154,24 +190,24 @@
             <h2>Le délice des sens</h2>
           </li>
 
-          <li class="s2">Folie Méricourt</li>
+          <li class="restaurants__location">Folie Méricourt</li>
 
         </ul>
 
-        <i class="far fa-heart"></i>
+        <i class="far fa-heart restaurants__logo"></i>
       </a>
 
   </main>
 
   <footer>
 
-    <ul class="footer__column">
+    <ul class="footer">
 
       <li class="footer__title">ohmyfood</li>
 
-      <li class="footer__info"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li>
+      <li class="footer__info "><i class="fas fa-utensils footer__ustensils"></i>Proposer un restaurant</li>
 
-      <li class="footer__info"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
+      <li class="footer__info "><i class="fas fa-hands-helping footer__hands"></i>Devenir partenaire</li>
 
       <li class="footer__info">Mentions légales</li>
 
