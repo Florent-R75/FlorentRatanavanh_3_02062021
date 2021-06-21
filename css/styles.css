@@ -29,21 +29,83 @@ body {
   margin: 0 auto;
 }
 
+.board__button {
+  background: linear-gradient(#ff79da 4%, #9356dc);
+  padding: 10px 26px;
+  font-size: 1.3rem;
+  border: transparent 0px solid;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+  display: block;
+  margin: 0px auto;
+  font-family: "roboto";
+  box-shadow: 0px 1px 10px #9356dc;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.board__button:hover::after {
+  opacity: 1;
+}
+.board__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 0px 5px 5px #9356dc;
+  background: linear-gradient(#a16be0 0%, #ff46cc 100%);
+  border-radius: 50px;
+  transition: opacity 250ms;
+}
+
 header {
   width: 100%;
 }
 header img {
-  height: 30px;
+  height: 40px;
   display: block;
   margin: 0px auto 0px;
   padding: 20px;
-  flex: 1;
   box-sizing: content-box;
 }
-header div {
-  flex: 1;
-  justify-content: start;
-  align-items: flex-start;
+
+.arrow__logo {
+  position: absolute;
+  top: 27px;
+  left: 20px;
+  font-size: 1.6rem;
+  color: black;
+}
+
+.footer {
+  background: #353535;
+  color: white;
+  padding: 20px 35px 40px;
+  list-style: none;
+}
+.footer__title {
+  font-family: "shrikhand";
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+}
+.footer__info {
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+.footer__ustensils {
+  padding-right: 15px;
+}
+.footer__hands {
+  padding-right: 5px;
+}
+.footer__contact {
+  text-decoration: none;
+  color: white;
 }
 
 .search {
@@ -58,7 +120,7 @@ header div {
   display: block;
   margin: 0 auto;
   background-color: #eaeaea;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: center;
   border: none;
 }
@@ -76,26 +138,81 @@ header div {
 .board__title {
   padding: 0px 60px 20px;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-family: "roboto bold";
+  margin-bottom: 20px;
 }
 .board__prg {
   font-size: 1.3rem;
-  padding: 0px 30px 20px;
+  padding: 0px 30px 30px;
   text-align: center;
   color: #808080;
 }
-.board__button {
-  background: #dd6eda;
-  padding: 20px 20px;
-  font-size: 1.2rem;
-  border: #ff79da 1px solid;
-  border-radius: 50px;
-  color: white;
+
+nav {
+  padding: 50px 30px;
+}
+nav h1 {
+  padding-bottom: 10px;
+  font-family: "roboto bold";
+  font-size: 2rem;
+}
+nav li {
   text-align: center;
-  display: block;
-  margin: 0px auto;
-  font-family: "roboto";
+  font-size: 1.2rem;
+}
+
+.functionning__wrapper {
+  list-style: none;
+}
+.functionning__btn {
+  margin: 20px auto;
+  cursor: pointer;
+  padding: 30px 0px;
+  border-radius: 50px;
+  position: relative;
+  width: 400px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 1px 10px #dcdada;
+  z-index: 1;
+}
+.functionning__btn:hover::after {
+  opacity: 1;
+}
+.functionning__btn:hover i {
+  color: #3c166a;
+}
+.functionning__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f2eafb;
+  border-radius: 50px;
+  opacity: 0;
+  z-index: -1;
+  box-shadow: 0px 5px 5px #dcdada;
+  transition: opacity 250ms;
+}
+.functionning__number {
+  border: solid 1px #9356dc;
+  background: #9356dc;
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 100px;
+  padding: 0px 7px;
+  position: absolute;
+  left: -5px;
+  top: 30px;
+}
+.functionning__logo {
+  color: grey;
+  position: absolute;
+  left: 50px;
+  top: 32px;
+  font-size: 1.4rem;
 }
 
 main {
@@ -105,7 +222,7 @@ main {
 main h1 {
   padding-bottom: 10px;
   font-family: "roboto bold";
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .restaurants__container {
@@ -121,9 +238,13 @@ main h1 {
   border-radius: 20px;
   overflow: hidden;
   margin: 20px;
-  border: #dad6d6 1px solid;
+  border: #dad6d6 0px solid;
   text-decoration: none;
   position: relative;
+  box-shadow: 0px 1px 10px #dcdada;
+}
+.restaurants:hover :nth-child(3) {
+  color: #9356dc;
 }
 .restaurants__frame {
   height: 220px;
@@ -155,6 +276,11 @@ main h1 {
   right: 25px;
   bottom: 27px;
   font-size: 1.6rem;
+  width: 25px;
+  transition: all, 330ms;
+}
+.restaurants__logo:hover {
+  transform: scale(2);
 }
 .restaurants .restaurants__portrait {
   object-position: 0px -188px;
@@ -167,76 +293,7 @@ main h1 {
   background: #99e2d0;
   color: #008766;
   border: #99e2d0 1px solid;
-  font-size: 1.1rem;
-}
-
-nav {
-  padding: 50px 30px;
-}
-nav h1 {
-  padding-bottom: 10px;
-  font-family: "roboto bold";
-  font-size: 1.6rem;
-}
-nav li {
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.functionning__wrapper {
-  list-style: none;
-}
-.functionning__btn {
-  margin: 20px auto;
-  padding: 30px 0px;
-  border-radius: 50px;
-  position: relative;
-  width: 400px;
-  background: #f6f6f6;
-}
-.functionning__number {
-  border: solid 1px #9356dc;
-  background: #9356dc;
-  color: #ffffff;
-  font-size: 1rem;
-  border-radius: 100px;
-  padding: 0px 7px;
-  position: absolute;
-  left: -5px;
-  top: 30px;
-}
-.functionning__logo {
-  color: grey;
-  position: absolute;
-  left: 50px;
-  top: 32px;
-  font-size: 1.4rem;
-}
-
-.footer {
-  background: #353535;
-  color: white;
-  padding: 20px 35px 40px;
-  list-style: none;
-}
-.footer__title {
-  font-family: "shrikhand";
-  font-size: 1.4rem;
-  padding-bottom: 20px;
-}
-.footer__info {
-  padding-bottom: 5px;
   font-size: 1.2rem;
-}
-.footer__ustensils {
-  padding-right: 15px;
-}
-.footer__hands {
-  padding-right: 5px;
-}
-.footer__contact {
-  text-decoration: none;
-  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

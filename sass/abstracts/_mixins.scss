@@ -7,3 +7,11 @@
 @mixin bloc-format {
   padding: 50px 30px;
 }
+
+@mixin btn-gradient {
+  background: linear-gradient($color-secondary 4%, $color-primary);
+}
+
+@mixin box-shadow-light {
+  box-shadow: 0px 1px 10px rgb(220, 218, 218);
+}
