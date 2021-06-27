@@ -1,3 +1,11 @@
+@keyframes fondu {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -280,7 +288,7 @@ main h1 {
   transition: all, 330ms;
 }
 .restaurants__logo:hover {
-  transform: scale(2);
+  transform: fill(grey);
 }
 .restaurants .restaurants__portrait {
   object-position: 0px -188px;
