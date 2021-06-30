@@ -20,5 +20,8 @@ $font-size-quaterly: 0.8rem;
 $font-size-fitily: 1.3rem;
 
 $breakpoints: (
-  mobile: 599px,
+  mobile: 479px,
+  mobile-max:480px,
+  tablet:768px,
+  desktop:1023px,
 );
