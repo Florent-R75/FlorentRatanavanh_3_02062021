@@ -1,0 +1,238 @@
+.logo {
+    position: relative;
+    top: -5px;
+}
+
+
+
+.search {
+  width: 100%;
+  display: block;
+  height: 55px;
+  background-color: $color-quaterly;
+  position: relative;
+
+  &__input {
+    height: 55px;
+    display: block;
+    margin: 0 auto;
+    background-color: $color-quaterly;
+    font-size: $font-size-tertiary;
+    text-align: center;
+    border: none;
+    
+
+    &:focus-visible{
+      outline: none;
+    }
+
+    &:focus{
+      background-color: white;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 14px;
+    left: 130px;
+    font-size: 1.2rem;
+  }
+}
+
+.board {
+  background: $color-fiftily;
+      padding: 60px 0 80px;
+
+  &__title {
+    padding: 0px 60px;
+    text-align: center;
+    font-size: $font-size-primary;
+    font-family: "roboto bold";
+    margin-bottom: 20px;
+  }
+
+  &__prg {
+    font-size: $font-size-secondary;
+    padding: 0px 30px 30px;
+    text-align: center;
+    color: $color-sixtily;
+  }
+}
+
+nav {
+  @include padding-mobile;
+  
+
+  h1 {
+    @include heading-title;
+  }
+
+  li {
+    text-align: center;
+    font-size: $font-size-tertiary;
+  }
+}
+
+.functionning {
+  &__wrapper {
+    list-style: none;
+  }
+
+  &__btn {
+    margin: 20px auto;
+    font-family: 'roboto medium';
+    cursor: pointer;
+    padding: 30px 0px;
+    border-radius: 50px;
+    position: relative;
+    width: 400px;
+    background-color: $color-fiftily;
+    @include box-shadow-light;
+    z-index: 1;
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+      & i {
+        color: darken($color-primary, 35);
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: lighten($color-primary, 35);
+      border-radius: 50px;
+      opacity: 0;
+      z-index: -1;
+      box-shadow: 0px 5px 5px rgb(220, 218, 218);
+      transition: opacity 250ms;
+    }
+  }
+
+  &__number {
+    border: solid 1px $color-primary;
+    background: $color-primary;
+    color: $color-nineth;
+    font-size: 1rem;
+    border-radius: 100px;
+    padding: 5px 10px;
+    position: absolute;
+    left: -13px;
+    top: 27px;
+  }
+
+  &__logo {
+    color: grey;
+    position: absolute;
+    left: 50px;
+    top: 32px;
+    font-size: 1.4rem;
+  }
+}
+
+main {
+  background: $color-fiftily;
+  @include padding-mobile;
+
+  h1 {
+    @include heading-title;
+  }
+}
+
+.restaurants__container {
+  background: $color-fiftily;
+  display: flex;
+  flex-flow: column nowrap;
+
+  align-items: center;
+}
+
+.restaurants {
+  flex: 1;
+  width: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+  border: rgb(218, 214, 214) 0px solid;
+  text-decoration: none;
+  position: relative;
+  @include box-shadow-light;
+
+  &:hover :nth-child(3) {
+    transform: scale(2);
+  }
+
+  &__frame {
+    height: 220px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  &__img {
+    width: 420px;
+    object-fit: contain;
+    object-position: 0px -67px;
+  }
+
+  // 2e restaurant, Reglages differents
+
+  &__legend {
+    height: 80px;
+    text-decoration: none;
+  }
+
+  h2 {
+    font-family: $font-secondary;
+    padding: 15px 10px 0px;
+    font-size: $font-size-secondary;
+    color: $color-eighth;
+  }
+
+  &__location {
+    padding: 0px 10px;
+    font-size: $font-size-secondary;
+    color: $color-eighth;
+  }
+
+  &__logo {
+    position: absolute;
+    right: 25px;
+    bottom: 27px;
+    font-size: 1.6rem;
+
+    width: 25px;
+
+    color:black;
+    scale: (1);
+    
+    font-weight: 400;
+    transition: all, 330ms;
+
+    
+  }
+
+  .restaurants__portrait {
+    object-position: 0px -188px;
+  }
+
+  &__new {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    padding: 5px 10px;
+    background: #99e2d0;
+    color: #008766;
+    border: #99e2d0 1px solid;
+    font-size: $font-size-tertiary;
+  }
+
+  
+}
+
+
+
+
