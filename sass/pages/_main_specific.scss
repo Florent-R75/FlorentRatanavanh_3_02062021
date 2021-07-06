@@ -1,9 +1,7 @@
 .logo {
-    position: relative;
-    top: -5px;
+  position: relative;
+  top: -5px;
 }
-
-
 
 .search {
   width: 100%;
@@ -20,13 +18,12 @@
     font-size: $font-size-tertiary;
     text-align: center;
     border: none;
-    
 
-    &:focus-visible{
+    &:focus-visible {
       outline: none;
     }
 
-    &:focus{
+    &:focus {
       background-color: white;
     }
   }
@@ -41,7 +38,7 @@
 
 .board {
   background: $color-fiftily;
-      padding: 60px 0 80px;
+  padding: 60px 0 80px;
 
   &__title {
     padding: 0px 60px;
@@ -60,8 +57,8 @@
 }
 
 nav {
-  @include padding-mobile;
-  
+  padding: 20px 10px;
+  @include flex(wrap);
 
   h1 {
     @include heading-title;
@@ -80,7 +77,7 @@ nav {
 
   &__btn {
     margin: 20px auto;
-    font-family: 'roboto medium';
+    font-family: "roboto medium";
     cursor: pointer;
     padding: 30px 0px;
     border-radius: 50px;
@@ -136,7 +133,7 @@ nav {
 
 main {
   background: $color-fiftily;
-  @include padding-mobile;
+  padding: 20px 10px;
 
   h1 {
     @include heading-title;
@@ -149,6 +146,27 @@ main {
   flex-flow: column nowrap;
 
   align-items: center;
+
+  @include tablet-only {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  @include tablet-stop {
+    align-items: flex-start;
+  }
+
+  @include tablet-mid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  @include desktop-only {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }
 
 .restaurants {
@@ -162,6 +180,25 @@ main {
   position: relative;
   @include box-shadow-light;
 
+  @include tablet-only {
+    flex: 1 1 auto;
+  }
+
+  @include tablet-stop {
+    flex: 0 1 auto;
+    width: 540px;
+  }
+
+  @include tablet-mid {
+    flex: 1 1 auto;
+    width: 320px;
+  }
+
+  @include desktop-only {
+    flex: 0 1 auto;
+    width: 462px;
+  }
+
   &:hover :nth-child(3) {
     transform: scale(2);
   }
@@ -170,12 +207,26 @@ main {
     height: 220px;
     overflow: hidden;
     border-radius: 20px 20px 0px 0px;
+
+    @include tablet-only {
+      flex: 1 1 auto;
+    }
   }
 
   &__img {
-    width: 420px;
+    width: 480px;
+
     object-fit: contain;
     object-position: 0px -67px;
+
+    @include tablet-only {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+
+    @include tablet-stop {
+      width: 540px;
+    }
   }
 
   // 2e restaurant, Reglages differents
@@ -206,13 +257,11 @@ main {
 
     width: 25px;
 
-    color:black;
+    color: black;
     scale: (1);
-    
+
     font-weight: 400;
     transition: all, 330ms;
-
-    
   }
 
   .restaurants__portrait {
@@ -229,10 +278,4 @@ main {
     border: #99e2d0 1px solid;
     font-size: $font-size-tertiary;
   }
-
-  
 }
-
-
-
-

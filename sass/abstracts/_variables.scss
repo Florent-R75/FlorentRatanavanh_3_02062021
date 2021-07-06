@@ -19,9 +19,23 @@ $font-size-tertiary: 1.2rem;
 $font-size-quaterly: 0.8rem;
 $font-size-fitily: 1.3rem;
 
+$padding: 20px, 30px, 40px, 50px;
+
 $breakpoints: (
-  mobile: 479px,
-  mobile-max:480px,
-  tablet:768px,
-  desktop:1023px,
+  mobile-max: 479px,
+  mobile-min: 480px,
+  tablet-max: 599px,
+  tablet-min: 600px,
+  tablet-mid-max: 757px,
+  tablet-mid-min: 758px,
+  tablet-up-max: 967px,
+  tablet-down-max: 968px,
+  desktop-max: 1023px,
+  desktop-min: 1024px,
+);
+
+$margin: (
+  margin-small: 20px,
+  margin-medium: 30px,
+  margin-big: 40px,
 );
