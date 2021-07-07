@@ -84,6 +84,17 @@ body {
   font-size: 14px;
   margin: 0 auto;
 }
+@media screen and (max-width: 479px) {
+  body {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    width: 1024px;
+  }
+}
+
 .board__button {
   background: linear-gradient(#ff79da 4%, #9356dc);
   padding: 10px 26px;
@@ -236,6 +247,13 @@ nav li {
 .functionning__wrapper {
   list-style: none;
 }
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .functionning__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 20px;
+  }
+}
 .functionning__btn {
   margin: 20px auto;
   font-family: "roboto medium";
@@ -247,6 +265,12 @@ nav li {
   background-color: #f6f6f6;
   box-shadow: 0px 10px 20px #dcdada;
   z-index: 1;
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .functionning__btn {
+    width: 100%;
+    flex: 1 1 auto;
+  }
 }
 .functionning__btn:hover::after {
   opacity: 1;
@@ -286,6 +310,11 @@ nav li {
   top: 32px;
   font-size: 1.4rem;
 }
+@media screen and (min-width: 600px) and (max-width: 757px) {
+  .functionning__title {
+    text-align: center;
+  }
+}
 
 main {
   background: #f6f6f6;
@@ -311,7 +340,7 @@ main h1 {
 }
 @media screen and (min-width: 600px) and (max-width: 757px) {
   .restaurants__container {
-    align-items: flex-start;
+    align-items: center;
   }
 }
 @media screen and (min-width: 758px) and (max-width: 1023px) {
@@ -364,7 +393,7 @@ main h1 {
   }
 }
 .restaurants:hover :nth-child(3) {
-  transform: scale(2);
+  opacity: 1;
 }
 .restaurants__frame {
   height: 220px;
@@ -374,6 +403,11 @@ main h1 {
 @media screen and (min-width: 480px) and (max-width: 599px) {
   .restaurants__frame {
     flex: 1 1 auto;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 757px) {
+  .restaurants__title {
+    text-align: center;
   }
 }
 .restaurants__img {
@@ -414,7 +448,7 @@ main h1 {
   font-size: 1.6rem;
   width: 25px;
   color: black;
-  scale: 1;
+  opacity: 1;
   font-weight: 400;
   transition: all, 330ms;
 }

@@ -49,9 +49,11 @@ body {
   font-size: 14px;
   margin: 0 auto;
 
-  @include mobile-only;
-}
+  @include mobile-only {
+    width: 480px;
+  }
 
-body {
-  @include tablet-only;
+  @include desktop-only {
+    width: 1024px;
+  }
 }
