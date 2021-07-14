@@ -45,6 +45,20 @@
     opacity: 0;
   }
 }
+@keyframes spinny {
+  0% {
+    transform: rotate(0deg);
+    background: #29d;
+  }
+  50% {
+    transform: rotate(180deg);
+    background: #00427c;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: #29d;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -69,7 +83,7 @@
 }
 @font-face {
   font-family: "roboto medium";
-  src: url("/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  src: url("/fonts/roboto/Roboto-Medium.ttf") format("truetype"), url("/fonts/roboto/roboto-medium-webfont.eot") format("embedded-opentype"), url("/fonts/roboto/roboto-medium-webfont.woff2") format("woff2"), url("/fonts/roboto/roboto-medium-webfont.woff") format("woff"), url("/fonts/roboto/roboto-medium-webfont.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -83,6 +97,8 @@ body {
   font-family: "roboto", "roboto bold", "shrikhand", Arial, Helvetica, sans-serif;
   font-size: 14px;
   margin: 0 auto;
+  text-rendering: geometricPrecision;
+  letter-spacing: -0.5px;
 }
 @media screen and (max-width: 479px) {
   body {
@@ -98,7 +114,7 @@ body {
 .board__button {
   background: linear-gradient(#ff79da 4%, #9356dc);
   padding: 10px 26px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border: transparent 0px solid;
   border-radius: 50px;
   color: white;
@@ -151,17 +167,59 @@ header img {
 .footer {
   background: #353535;
   color: white;
-  padding: 20px 35px 40px;
+  padding: 20px 40px 40px;
   list-style: none;
+  text-rendering: geometricprecision;
+}
+@media screen and (min-width: 600px) and (max-width: 757px) {
+  .footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 758px) and (max-width: 1023px) {
+  .footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
 }
 .footer__title {
   font-family: "shrikhand";
   font-size: 1.4rem;
   padding-bottom: 20px;
 }
+@media screen and (min-width: 758px) and (max-width: 1023px) {
+  .footer__title {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__title {
+    margin: 20px;
+  }
+}
 .footer__info {
   padding-bottom: 5px;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 758px) and (max-width: 1023px) {
+  .footer__info {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__info {
+    margin: 20px;
+  }
 }
 .footer__ustensils {
   padding-right: 15px;
@@ -173,9 +231,6 @@ header img {
   text-decoration: none;
   color: white;
 }
-.footer__bold {
-  font-family: "roboto bold";
-}
 
 .logo {
   position: relative;
@@ -184,30 +239,42 @@ header img {
 
 .search {
   width: 100%;
-  display: block;
+  color: black;
   height: 55px;
   background-color: #eaeaea;
   position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
 }
 .search__input {
   height: 55px;
-  display: block;
+  display: inline;
   margin: 0 auto;
   background-color: #eaeaea;
   font-size: 1.2rem;
   text-align: center;
   border: none;
+  color: black;
 }
 .search__input:focus-visible {
   outline: none;
 }
 .search__input:focus {
-  background-color: white;
+  background-color: #e0e0e0;
+}
+.search__input::before {
+  content: "Paris, Belleville";
+  color: black;
+}
+.search__input::placeholder {
+  color: black;
 }
 .search__logo {
-  position: absolute;
-  top: 14px;
-  left: 130px;
+  float: left;
+  position: relative;
+  top: 15px;
+  left: 10px;
   font-size: 1.2rem;
 }
 
@@ -216,9 +283,9 @@ header img {
   padding: 60px 0 80px;
 }
 .board__title {
-  padding: 0px 60px;
+  padding: 0px 75px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "roboto bold";
   margin-bottom: 20px;
 }
@@ -230,12 +297,12 @@ header img {
 }
 
 nav {
-  padding: 20px 10px;
+  padding: 20px 20px 40px;
   display: flex;
   flex-flow: column wrap;
 }
 nav h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "roboto bold";
   margin: 20px;
 }
@@ -315,13 +382,23 @@ nav li {
     text-align: center;
   }
 }
+@media screen and (min-width: 758px) and (max-width: 1023px) {
+  .functionning__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .functionning__title {
+    text-align: center;
+  }
+}
 
 main {
   background: #f6f6f6;
-  padding: 20px 10px;
+  padding: 20px 20px 40px;
 }
 main h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "roboto bold";
   margin: 20px;
 }
@@ -388,15 +465,15 @@ main h1 {
 }
 @media screen and (min-width: 1024px) {
   .restaurants {
-    flex: 0 1 auto;
-    width: 462px;
+    flex: 1 1 auto;
+    width: 320px;
   }
 }
 .restaurants:hover :nth-child(3) {
   opacity: 1;
 }
 .restaurants__frame {
-  height: 220px;
+  height: 250px;
   overflow: hidden;
   border-radius: 20px 20px 0px 0px;
 }
@@ -410,10 +487,20 @@ main h1 {
     text-align: center;
   }
 }
+@media screen and (min-width: 758px) and (max-width: 1023px) {
+  .restaurants__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__title {
+    text-align: center;
+  }
+}
 .restaurants__img {
   width: 480px;
-  object-fit: contain;
-  object-position: 0px -67px;
+  height: 250px;
+  object-fit: cover;
 }
 @media screen and (min-width: 480px) and (max-width: 599px) {
   .restaurants__img {
@@ -427,33 +514,30 @@ main h1 {
   }
 }
 .restaurants__legend {
-  height: 80px;
+  height: 100px;
   text-decoration: none;
 }
 .restaurants h2 {
   font-family: "roboto bold";
-  padding: 15px 10px 0px;
-  font-size: 1.3rem;
+  padding: 20px 15px 0px;
+  font-size: 1.4rem;
   color: #000000;
 }
 .restaurants__location {
-  padding: 0px 10px;
-  font-size: 1.3rem;
+  padding: 0px 15px;
+  font-size: 1.4rem;
   color: #000000;
 }
 .restaurants__logo {
   position: absolute;
   right: 25px;
-  bottom: 27px;
+  bottom: 35px;
   font-size: 1.6rem;
   width: 25px;
   color: black;
   opacity: 1;
   font-weight: 400;
   transition: all, 330ms;
-}
-.restaurants .restaurants__portrait {
-  object-position: 0px -188px;
 }
 .restaurants__new {
   position: absolute;
@@ -464,6 +548,45 @@ main h1 {
   color: #008766;
   border: #99e2d0 1px solid;
   font-size: 1.2rem;
+}
+
+i.far.fa-heart {
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 5;
+  color: black;
+  font-weight: 400;
+  transition: all, 330ms;
+}
+i.far.fa-heart:hover {
+  color: #9356dc;
+  font-weight: 900;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: #99e2d0;
+  animation: loader 6000ms;
+  animation-fill-mode: both;
+  opacity: 0;
+  z-index: 10;
+  font-size: 20vh;
+  color: white;
+}
+.loader:before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.loader i {
+  animation: rotate 3000ms;
+  animation-iteration-count: infinite;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -45,6 +45,20 @@
     opacity: 0;
   }
 }
+@keyframes spinny {
+  0% {
+    transform: rotate(0deg);
+    background: #29d;
+  }
+  50% {
+    transform: rotate(180deg);
+    background: #00427c;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: #29d;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -69,7 +83,7 @@
 }
 @font-face {
   font-family: "roboto medium";
-  src: url("/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  src: url("/fonts/roboto/Roboto-Medium.ttf") format("truetype"), url("/fonts/roboto/roboto-medium-webfont.eot") format("embedded-opentype"), url("/fonts/roboto/roboto-medium-webfont.woff2") format("woff2"), url("/fonts/roboto/roboto-medium-webfont.woff") format("woff"), url("/fonts/roboto/roboto-medium-webfont.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -83,6 +97,8 @@ body {
   font-family: "roboto", "roboto bold", "shrikhand", Arial, Helvetica, sans-serif;
   font-size: 14px;
   margin: 0 auto;
+  text-rendering: geometricPrecision;
+  letter-spacing: -0.5px;
 }
 @media screen and (max-width: 479px) {
   body {
@@ -98,7 +114,7 @@ body {
 .board__button {
   background: linear-gradient(#ff79da 4%, #9356dc);
   padding: 10px 26px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border: transparent 0px solid;
   border-radius: 50px;
   color: white;
@@ -151,17 +167,59 @@ header img {
 .footer {
   background: #353535;
   color: white;
-  padding: 20px 35px 40px;
+  padding: 20px 40px 40px;
   list-style: none;
+  text-rendering: geometricprecision;
+}
+@media screen and (min-width: 600px) and (max-width: 757px) {
+  .footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 758px) and (max-width: 1023px) {
+  .footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
 }
 .footer__title {
   font-family: "shrikhand";
   font-size: 1.4rem;
   padding-bottom: 20px;
 }
+@media screen and (min-width: 758px) and (max-width: 1023px) {
+  .footer__title {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__title {
+    margin: 20px;
+  }
+}
 .footer__info {
   padding-bottom: 5px;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 758px) and (max-width: 1023px) {
+  .footer__info {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__info {
+    margin: 20px;
+  }
 }
 .footer__ustensils {
   padding-right: 15px;
@@ -172,9 +230,6 @@ header img {
 .footer__contact {
   text-decoration: none;
   color: white;
-}
-.footer__bold {
-  font-family: "roboto bold";
 }
 
 header {
@@ -198,40 +253,35 @@ main {
   margin-bottom: -48px;
 }
 
-.menu {
-  font-family: "shrikhand";
-}
-.menu__logo {
+i.far.fa-heart {
   position: absolute;
   right: 45px;
   top: 45px;
   font-size: 1.6rem;
   cursor: pointer;
   z-index: 5;
-  animation: opacity 150ms;
-  animation-play-state: paused;
-  transition: transform 150ms;
-}
-.menu__logo--clr {
-  position: absolute;
-  right: 45px;
-  top: 45px;
-  font-size: 1.6rem;
-  cursor: pointer;
+  color: black;
   opacity: 1;
-  color: white;
-  z-index: 4;
-  transition: transform 150ms;
-  transform: scale(1);
+  font-weight: 400;
+  transition: all, 330ms;
 }
-.menu__logo:hover {
-  opacity: 0;
+i.far.fa-heart:hover {
+  color: #9356dc;
+  font-weight: 900;
 }
-.menu__logonot:hover {
-  opacity: 1;
+
+.menu {
+  font-family: "shrikhand";
+}
+.menu__general {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 .menu__bloc {
   margin-top: 40px;
+  flex: 0 1 auto;
+  width: 460px;
 }
 .menu__title {
   font-size: 1.2rem;
@@ -251,12 +301,13 @@ main {
   border-radius: 20px;
   padding: 15px 10px;
   margin: 20px 0px;
+  margin-right: 0px;
   font-size: 1.2rem;
   list-style: none;
   position: relative;
   cursor: pointer;
   box-shadow: 0px 10px 20px #dcdada;
-  transition: transform 400ms;
+  transition: transform 400ms, margin-right 400ms;
   transform-origin: left;
   overflow: hidden;
 }
@@ -293,6 +344,12 @@ main {
 }
 .menu__comments {
   color: #808080;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 0px;
+  transition: all 400ms;
+  display: inline-block;
 }
 .menu__price {
   position: absolute;
@@ -303,43 +360,21 @@ main {
   transition: transform 500ms ease-in-out;
 }
 .menu__appetizers {
-  animation: fondu 500ms ease-in-out both 3200ms;
+  animation: fondu 500ms ease-in-out both 400ms;
   animation-fill-mode: both;
 }
 .menu__dishes {
-  animation: fondu 500ms ease-in-out both 3400ms;
+  animation: fondu 500ms ease-in-out both 600ms;
   animation-fill-mode: both;
 }
 .menu__desserts {
-  animation: fondu 500ms ease-in-out both 3600ms;
+  animation: fondu 500ms ease-in-out both 800ms;
   animation-fill-mode: both;
 }
 
 .board__button {
   margin-top: 60px;
   padding: 10px 77px;
-}
-
-.loader {
-  position: absolute;
-  background-color: #99e2d0;
-  animation: loader 6000ms;
-  animation-fill-mode: both;
-  width: 480px;
-  height: 100vh;
-  opacity: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  flex-flow: column nowrap;
-  align-items: center;
-  font-size: 20vh;
-  color: white;
-  margin: 0 auto;
-}
-.loader i {
-  animation: rotate 3000ms;
-  animation-iteration-count: infinite;
 }
 
 /*# sourceMappingURL=la_palette.css.map */

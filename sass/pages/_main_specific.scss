@@ -5,33 +5,47 @@
 
 .search {
   width: 100%;
-  display: block;
+  color: black;
   height: 55px;
   background-color: $color-quaterly;
   position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
 
   &__input {
     height: 55px;
-    display: block;
+    display: inline;
     margin: 0 auto;
     background-color: $color-quaterly;
     font-size: $font-size-tertiary;
     text-align: center;
     border: none;
+    color: black;
 
     &:focus-visible {
       outline: none;
     }
 
     &:focus {
-      background-color: white;
+      background-color: darken($color-quaterly, 4%);
+    }
+
+    &::before {
+      content: "Paris, Belleville";
+      color: black;
+    }
+
+    &::placeholder {
+      color: black;
     }
   }
 
   &__logo {
-    position: absolute;
-    top: 14px;
-    left: 130px;
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 10px;
     font-size: 1.2rem;
   }
 }
@@ -41,7 +55,7 @@
   padding: 60px 0 80px;
 
   &__title {
-    padding: 0px 60px;
+    padding: 0px 75px;
     text-align: center;
     font-size: $font-size-primary;
     font-family: "roboto bold";
@@ -57,7 +71,7 @@
 }
 
 nav {
-  padding: 20px 10px;
+  padding: 20px 20px 40px;
   @include flex(wrap);
 
   h1 {
@@ -146,12 +160,19 @@ nav {
     @include tablet-stop {
       text-align: center;
     }
+    @include tablet-mid {
+      text-align: center;
+    }
+
+    @include desktop-only {
+      text-align: center;
+    }
   }
 }
 
 main {
   background: $color-fiftily;
-  padding: 20px 10px;
+  padding: 20px 20px 40px;
 
   h1 {
     @include heading-title;
@@ -213,15 +234,15 @@ main {
   }
 
   @include desktop-only {
-    flex: 0 1 auto;
-    width: 462px;
+    flex: 1 1 auto;
+    width: 320px;
   }
 
   &:hover :nth-child(3) {
     opacity: 1;
   }
   &__frame {
-    height: 220px;
+    height: 250px;
     overflow: hidden;
     border-radius: 20px 20px 0px 0px;
 
@@ -234,13 +255,20 @@ main {
     @include tablet-stop {
       text-align: center;
     }
+
+    @include tablet-mid {
+      text-align: center;
+    }
+    @include desktop-only {
+      text-align: center;
+    }
   }
 
   &__img {
     width: 480px;
-
-    object-fit: contain;
-    object-position: 0px -67px;
+    height: 250px;
+    object-fit: cover;
+    // object-position: 0px -67px;
 
     @include tablet-only {
       flex: 1 1 auto;
@@ -255,27 +283,27 @@ main {
   // 2e restaurant, Reglages differents
 
   &__legend {
-    height: 80px;
+    height: 100px;
     text-decoration: none;
   }
 
   h2 {
     font-family: $font-secondary;
-    padding: 15px 10px 0px;
-    font-size: $font-size-secondary;
+    padding: 20px 15px 0px;
+    font-size: $font-size-fitily;
     color: $color-eighth;
   }
 
   &__location {
-    padding: 0px 10px;
-    font-size: $font-size-secondary;
+    padding: 0px 15px;
+    font-size: $font-size-fitily;
     color: $color-eighth;
   }
 
   &__logo {
     position: absolute;
     right: 25px;
-    bottom: 27px;
+    bottom: 35px;
     font-size: 1.6rem;
 
     width: 25px;
@@ -287,9 +315,9 @@ main {
     transition: all, 330ms;
   }
 
-  .restaurants__portrait {
-    object-position: 0px -188px;
-  }
+  // .restaurants__portrait {
+  // object-position: 0px -188px;
+  // }
 
   &__new {
     position: absolute;
@@ -300,5 +328,52 @@ main {
     color: #008766;
     border: #99e2d0 1px solid;
     font-size: $font-size-tertiary;
+  }
+}
+
+i.far.fa-heart {
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 5;
+
+  color: black;
+  // opacity: 1;
+  font-weight: 400;
+  transition: all, 330ms;
+
+  &:hover {
+    color: $color-primary;
+    font-weight: 900;
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+
+  background-color: $color-tertiary;
+  animation: loader 6000ms;
+  animation-fill-mode: both;
+
+  opacity: 0;
+  z-index: 10;
+
+  font-size: 20vh;
+  color: white;
+
+  &:before {
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  & i {
+    animation: rotate 3000ms;
+    animation-iteration-count: infinite;
   }
 }

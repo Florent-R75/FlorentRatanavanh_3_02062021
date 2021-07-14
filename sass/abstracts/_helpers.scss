@@ -55,3 +55,18 @@
     opacity: 0;
   }
 }
+
+@keyframes spinny {
+  0% {
+    transform: rotate(0deg);
+    background: #29d;
+  }
+  50% {
+    transform: rotate(180deg);
+    background: #00427c;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: #29d;
+  }
+}

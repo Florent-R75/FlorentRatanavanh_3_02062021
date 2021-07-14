@@ -1,18 +1,53 @@
 .footer {
   background: $color-sevently;
   color: white;
-  padding: 20px 35px 40px;
+  padding: 20px 40px 40px;
   list-style: none;
+  text-rendering: geometricprecision;
+
+  @include tablet-stop {
+    text-align: center;
+  }
+
+  @include tablet-mid {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  @include desktop-only {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
 
   &__title {
     font-family: $font-tertiary;
     font-size: 1.4rem;
     padding-bottom: 20px;
+
+    @include tablet-mid {
+      margin: 20px;
+    }
+
+    @include desktop-only {
+      margin: 20px;
+    }
   }
 
   &__info {
     padding-bottom: 5px;
     font-size: 1.2rem;
+
+    @include tablet-mid {
+      margin: 20px;
+    }
+
+    @include desktop-only {
+      margin: 20px;
+    }
   }
 
   &__ustensils {
@@ -27,9 +62,4 @@
     text-decoration: none;
     color: white;
   }
-
-  &__bold{
-        font-family: 'roboto bold';
-  }
 }
-

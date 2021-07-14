@@ -30,6 +30,12 @@
   }
 }
 
+@mixin break($break-min) {
+  @media screen and (min-width: $break-min) {
+    @content;
+  }
+}
+
 // Mixins Générales
 
 @mixin heading-title {
