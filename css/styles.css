@@ -270,11 +270,17 @@ header img {
 .search__input::placeholder {
   color: black;
 }
+.search__input:focus::-webkit-input-placeholder {
+  color: transparent !important;
+}
+.search__input:focus::-moz-placeholder {
+  color: transparent !important;
+}
 .search__logo {
   float: left;
   position: relative;
   top: 15px;
-  left: 10px;
+  left: 14px;
   font-size: 1.2rem;
 }
 

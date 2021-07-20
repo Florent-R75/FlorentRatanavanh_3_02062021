@@ -41,6 +41,9 @@ i.far.fa-heart {
 
 .menu {
   font-family: $font-tertiary;
+  @include break(600px) {
+    text-align: center;
+  }
 
   &__general {
     display: flex;
@@ -102,6 +105,10 @@ i.far.fa-heart {
     &:hover span {
       transform: rotate(0deg);
     }
+
+    &:hover .menu__comments {
+      width: 320px;
+    }
   }
 
   &__btn {
@@ -130,8 +137,10 @@ i.far.fa-heart {
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-right: 0px;
-    transition: all 400ms;
+    transition: all 300ms ease-in-out 100ms;
     display: inline-block;
+    width: 343px;
+    transform-origin: left;
   }
 
   &__price {

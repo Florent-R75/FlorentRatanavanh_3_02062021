@@ -273,6 +273,11 @@ i.far.fa-heart:hover {
 .menu {
   font-family: "shrikhand";
 }
+@media screen and (min-width: 600px) {
+  .menu {
+    text-align: center;
+  }
+}
 .menu__general {
   display: flex;
   flex-flow: row wrap;
@@ -324,6 +329,9 @@ i.far.fa-heart:hover {
 .menu__carousel:hover span {
   transform: rotate(0deg);
 }
+.menu__carousel:hover .menu__comments {
+  width: 320px;
+}
 .menu__btn {
   height: 80px;
   width: 80px;
@@ -348,8 +356,10 @@ i.far.fa-heart:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: 0px;
-  transition: all 400ms;
+  transition: all 300ms ease-in-out 100ms;
   display: inline-block;
+  width: 343px;
+  transform-origin: left;
 }
 .menu__price {
   position: absolute;

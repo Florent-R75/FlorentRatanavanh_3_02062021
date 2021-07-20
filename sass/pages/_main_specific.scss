@@ -39,13 +39,20 @@
     &::placeholder {
       color: black;
     }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent !important;
+    }
+    &:focus::-moz-placeholder {
+      color: transparent !important;
+    }
   }
 
   &__logo {
     float: left;
     position: relative;
     top: 15px;
-    left: 10px;
+    left: 14px;
     font-size: 1.2rem;
   }
 }
