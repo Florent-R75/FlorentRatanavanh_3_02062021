@@ -85,7 +85,7 @@ i.far.fa-heart {
     cursor: pointer;
     @include box-shadow-light;
 
-    transition: transform 400ms, margin-right 400ms;
+    transition: transform 400ms;
     transform-origin: left;
     overflow: hidden;
 

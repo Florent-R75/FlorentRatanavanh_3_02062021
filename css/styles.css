@@ -246,6 +246,7 @@ header img {
   display: flex;
   flex-flow: row;
   justify-content: center;
+  transition: all;
 }
 .search__input {
   height: 55px;
@@ -275,6 +276,9 @@ header img {
 }
 .search__input:focus::-moz-placeholder {
   color: transparent !important;
+}
+.search__input:hover .search {
+  background-color: #e0e0e0;
 }
 .search__logo {
   float: left;
@@ -383,6 +387,11 @@ nav li {
   top: 32px;
   font-size: 1.4rem;
 }
+.functionning__title {
+  font-size: 1.8rem;
+  font-family: "roboto bold";
+  margin: 20px;
+}
 @media screen and (min-width: 600px) and (max-width: 757px) {
   .functionning__title {
     text-align: center;
@@ -487,6 +496,11 @@ main h1 {
   .restaurants__frame {
     flex: 1 1 auto;
   }
+}
+.restaurants__title {
+  font-size: 1.8rem;
+  font-family: "roboto bold";
+  margin: 20px;
 }
 @media screen and (min-width: 600px) and (max-width: 757px) {
   .restaurants__title {
