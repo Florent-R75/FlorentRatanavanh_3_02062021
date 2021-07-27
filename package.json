@@ -4,7 +4,7 @@
   "description": "P3 Sass et Animations",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/styles.css"
+    "sass": "sass --watch ./sass/le_delice.scss:./css/le_delice.css"
   },
   "keywords": [
     "Openclassrooms",

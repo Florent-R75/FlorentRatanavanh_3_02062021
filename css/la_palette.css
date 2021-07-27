@@ -312,7 +312,7 @@ i.far.fa-heart:hover {
   position: relative;
   cursor: pointer;
   box-shadow: 0px 10px 20px #dcdada;
-  transition: transform 400ms, margin-right 400ms;
+  transition: transform 400ms;
   transform-origin: left;
   overflow: hidden;
 }
