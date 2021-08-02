@@ -12,8 +12,16 @@ header {
 
 .arrow__logo {
   position: absolute;
-  top: 27px;
-  left: 20px;
-  font-size: 1.6rem;
+  top: 17px;
+  left: 21px;
+  font-size: 1.2rem;
   color: black;
+}
+
+.logo {
+  font-size: $font-size-primary;
+  height: 60px;
+  padding-top: 10px;
+  text-align: center;
+  font-family: $font-tertiary;
 }

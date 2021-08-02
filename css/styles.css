@@ -100,16 +100,6 @@ body {
   text-rendering: geometricPrecision;
   letter-spacing: -0.5px;
 }
-@media screen and (max-width: 479px) {
-  body {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body {
-    width: 1024px;
-  }
-}
 
 .board__button {
   background: linear-gradient(#ff79da 4%, #9356dc);
@@ -162,6 +152,12 @@ header img {
   left: 20px;
   font-size: 1.6rem;
   color: black;
+}
+
+.logo {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "shrikhand";
 }
 
 .footer {
@@ -235,6 +231,7 @@ header img {
 .logo {
   position: relative;
   top: -5px;
+  font-family: "shrikhand";
 }
 
 .search {
