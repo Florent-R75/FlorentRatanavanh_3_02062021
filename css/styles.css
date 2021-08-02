@@ -559,6 +559,10 @@ main h1 {
   font-weight: 400;
   transition: all, 330ms;
 }
+.restaurants__logo:hover {
+  color: yellow;
+  font-weight: 900;
+}
 .restaurants__new {
   position: absolute;
   right: 15px;
@@ -576,10 +580,18 @@ i.far.fa-heart {
   z-index: 5;
   color: black;
   font-weight: 400;
-  transition: all, 330ms;
+}
+i.far.fa-heart::before {
+  display: initial;
 }
 i.far.fa-heart:hover {
-  color: #9356dc;
+  background: -moz-linear-gradient(top, #9356dc 0%, #ff79da 100%);
+  background: -webkit-linear-gradient(top, #9356dc 0%, #ff79da 100%);
+  background: linear-gradient(to bottom, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
 

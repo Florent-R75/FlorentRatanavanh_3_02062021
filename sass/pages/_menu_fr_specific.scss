@@ -29,12 +29,22 @@ i.far.fa-heart {
   z-index: 5;
 
   color: black;
-  opacity: 1;
+
   font-weight: 400;
-  transition: all, 330ms;
+
+  &::before {
+    display: initial;
+  }
 
   &:hover {
-    color: $color-primary;
+    background: -moz-linear-gradient(top, #9356dc 0%, #ff79da 100%);
+    background: -webkit-linear-gradient(top, #9356dc 0%, #ff79da 100%);
+    background: linear-gradient(to bottom, #9356dc 0%, #ff79da 100%);
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 900;
   }
 }
@@ -166,6 +176,16 @@ i.far.fa-heart {
     animation: fondu 500ms ease-in-out both 800ms;
     animation-fill-mode: both;
   }
+}
+
+i.far.fa-check-circle {
+  background: white;
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }
 
 .board__button {
