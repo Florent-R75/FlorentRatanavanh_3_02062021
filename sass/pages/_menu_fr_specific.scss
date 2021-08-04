@@ -34,6 +34,11 @@ i.far.fa-heart {
 
   font-weight: 400;
 
+  @include break(480px) {
+    position: static;
+    padding-right: 10px;
+  }
+
   &::before {
     display: initial;
   }
@@ -152,7 +157,7 @@ i.far.fa-heart {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    transition: width 2000ms ease-in-out 2000ms;
+    transition: width 2000ms ease-in-out 200ms;
     transform-origin: left;
     width: auto;
   }
@@ -277,6 +282,24 @@ i.far.fa-check-circle {
   @include break(1024px) {
     i.far.fa-heart.menu__logo {
       right: 50px;
+    }
+  }
+
+  .row {
+    @include break(480px) {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+    }
+  }
+
+  .row1 {
+    @include break(480px) {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      width: 415px;
+      align-items: baseline;
     }
   }
 }

@@ -263,6 +263,12 @@ i.far.fa-heart {
   color: black;
   font-weight: 400;
 }
+@media screen and (min-width: 480px) {
+  i.far.fa-heart {
+    position: static;
+    padding-right: 10px;
+  }
+}
 i.far.fa-heart::before {
   display: initial;
 }
@@ -366,7 +372,7 @@ i.far.fa-heart:hover {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: width 2000ms ease-in-out 2000ms;
+  transition: width 2000ms ease-in-out 200ms;
   transform-origin: left;
   width: auto;
 }
@@ -468,6 +474,22 @@ i.far.fa-check-circle {
 @media screen and (min-width: 414px) and (min-width: 1024px) {
   i.far.fa-heart.menu__logo {
     right: 50px;
+  }
+}
+@media screen and (min-width: 414px) and (min-width: 480px) {
+  .row {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 414px) and (min-width: 480px) {
+  .row1 {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 415px;
+    align-items: baseline;
   }
 }
 
