@@ -39,9 +39,9 @@
 // Mixins Générales
 
 @mixin heading-title {
-  font-size: $font-size-primary;
+  font-size: $font-size-fitily;
   font-family: $font-secondary;
-  margin: map-get($margin, margin-small);
+  margin: map-get($margin, margin-small, 0);
 }
 
 @mixin padding-mobile {

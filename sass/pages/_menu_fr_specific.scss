@@ -152,7 +152,7 @@ i.far.fa-heart {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    transition: all 200ms ease-in-out 2000ms;
+    transition: width 2000ms ease-in-out 2000ms;
     transform-origin: left;
     width: auto;
   }

@@ -64,26 +64,32 @@
 
 .board {
   background: $color-fiftily;
-  padding: 60px 0 80px;
+  padding: 40px 0 50px;
 
   &__title {
-    padding: 0px 75px;
+    padding: 0px 56px;
+    margin-bottom: 10px;
+    font-size: $font-size-fitily;
+
     text-align: center;
-    font-size: $font-size-primary;
+
     font-family: "roboto bold";
-    margin-bottom: 20px;
   }
 
   &__prg {
-    font-size: $font-size-secondary;
-    padding: 0px 30px 30px;
+    font-size: $font-size-tertiary;
+    padding: 0px 20px 30px;
     text-align: center;
     color: $color-sixtily;
+  }
+
+  &__button {
+    font-size: 0.85rem;
   }
 }
 
 nav {
-  padding: 20px 20px 40px;
+  padding: 40px 15px;
   @include flex(wrap);
 
   h1 {
@@ -93,6 +99,9 @@ nav {
   li {
     text-align: center;
     font-size: $font-size-tertiary;
+  }
+  @include break(1024px) {
+    padding: 40px 50px;
   }
 }
 
@@ -105,16 +114,24 @@ nav {
       flex-flow: column nowrap;
       margin: 0 20px;
     }
+
+    @include break(1024px) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+    }
   }
 
   &__btn {
     margin: 20px auto;
     font-family: "roboto medium";
     cursor: pointer;
-    padding: 30px 0px;
-    border-radius: 50px;
+
     position: relative;
-    width: 400px;
+    padding: 25px 0px;
+    width: 290px;
+    border-radius: 20px;
+
     background-color: $color-fiftily;
     @include box-shadow-light;
     z-index: 1;
@@ -152,24 +169,32 @@ nav {
     border: solid 1px $color-primary;
     background: $color-primary;
     color: $color-nineth;
-    font-size: 1rem;
+
     border-radius: 100px;
-    padding: 5px 10px;
+    font-size: 0.8rem;
+    padding: 2px 7px;
+
     position: absolute;
-    left: -13px;
-    top: 27px;
+    left: -10px;
+    top: 23px;
   }
 
   &__logo {
     color: grey;
     position: absolute;
-    left: 50px;
-    top: 32px;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    left: 25px;
+    top: 25px;
+
+    @include break(360px) {
+      left: 30px;
+    }
   }
 
   &__title {
-    @include heading-title;
+    font-size: $font-size-fitily;
+    font-family: $font-secondary;
+    margin-left: 20px;
 
     @include tablet-stop {
       text-align: center;
@@ -186,7 +211,7 @@ nav {
 
 main {
   background: $color-fiftily;
-  padding: 20px 20px 40px;
+  padding: 40px 15px;
 
   h1 {
     @include heading-title;
@@ -212,19 +237,19 @@ main {
   @include tablet-mid {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   @include desktop-only {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
 .restaurants {
   flex: 1;
-  width: 420px;
+  width: 300px;
   border-radius: 20px;
   overflow: hidden;
   margin: 20px;
@@ -243,12 +268,12 @@ main {
   }
 
   @include tablet-mid {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     width: 320px;
   }
 
   @include desktop-only {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     width: 320px;
   }
 
@@ -256,17 +281,23 @@ main {
     opacity: 1;
   }
   &__frame {
-    height: 250px;
+    height: 165px;
     overflow: hidden;
     border-radius: 20px 20px 0px 0px;
 
     @include tablet-only {
       flex: 1 1 auto;
     }
+
+    @include tablet-mid {
+      flex: 1 1 auto;
+    }
   }
 
   &__title {
-    @include heading-title;
+    font-size: 1.4rem;
+    font-family: "roboto bold";
+    margin-left: 20px;
 
     @include tablet-stop {
       text-align: center;
@@ -281,10 +312,9 @@ main {
   }
 
   &__img {
-    width: 480px;
-    height: 250px;
+    width: 300px;
+    height: 170px;
     object-fit: cover;
-    // object-position: 0px -67px;
 
     @include tablet-only {
       flex: 1 1 auto;
@@ -294,46 +324,36 @@ main {
     @include tablet-stop {
       width: 540px;
     }
+
+    @include break(758px) {
+      width: 320px;
+    }
   }
 
   // 2e restaurant, Reglages differents
 
   &__legend {
-    height: 100px;
+    height: 70px;
     text-decoration: none;
   }
 
   h2 {
     font-family: $font-secondary;
-    padding: 20px 15px 0px;
-    font-size: $font-size-fitily;
+    padding: 15px 15px 0px;
+    font-size: $font-size-tertiary;
     color: $color-eighth;
   }
 
   &__location {
     padding: 0px 15px;
-    font-size: $font-size-fitily;
+    font-size: $font-size-tertiary;
     color: $color-eighth;
   }
 
   &__logo {
     position: absolute;
     right: 25px;
-    bottom: 35px;
-    font-size: 1.6rem;
-
-    width: 25px;
-
-    color: black;
-    opacity: 1;
-
-    font-weight: 400;
-    transition: all, 330ms;
-
-    &:hover {
-      color: yellow;
-      font-weight: 900;
-    }
+    bottom: 26px;
   }
 
   &__new {
@@ -349,7 +369,7 @@ main {
 }
 
 i.far.fa-heart {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   cursor: pointer;
   z-index: 5;
 

@@ -104,7 +104,7 @@ body {
 .board__button {
   background: linear-gradient(#ff79da 4%, #9356dc);
   padding: 10px 26px;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   border: transparent 0px solid;
   border-radius: 50px;
   color: white;
@@ -148,14 +148,16 @@ header img {
 
 .arrow__logo {
   position: absolute;
-  top: 27px;
-  left: 20px;
-  font-size: 1.6rem;
+  top: 17px;
+  left: 21px;
+  font-size: 1.2rem;
   color: black;
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
+  height: 60px;
+  padding-top: 10px;
   text-align: center;
   font-family: "shrikhand";
 }
@@ -190,7 +192,7 @@ header img {
 }
 .footer__title {
   font-family: "shrikhand";
-  font-size: 1.4rem;
+  font-size: 1rem;
   padding-bottom: 20px;
 }
 @media screen and (min-width: 758px) and (max-width: 1023px) {
@@ -205,7 +207,7 @@ header img {
 }
 .footer__info {
   padding-bottom: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 @media screen and (min-width: 758px) and (max-width: 1023px) {
   .footer__info {
@@ -250,7 +252,7 @@ header img {
   display: inline;
   margin: 0 auto;
   background-color: #eaeaea;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   border: none;
   color: black;
@@ -287,60 +289,74 @@ header img {
 
 .board {
   background: #f6f6f6;
-  padding: 60px 0 80px;
+  padding: 40px 0 50px;
 }
 .board__title {
-  padding: 0px 75px;
+  padding: 0px 56px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
   text-align: center;
-  font-size: 1.8rem;
   font-family: "roboto bold";
-  margin-bottom: 20px;
 }
 .board__prg {
-  font-size: 1.3rem;
-  padding: 0px 30px 30px;
+  font-size: 1rem;
+  padding: 0px 20px 30px;
   text-align: center;
   color: #808080;
 }
+.board__button {
+  font-size: 0.85rem;
+}
 
 nav {
-  padding: 20px 20px 40px;
+  padding: 40px 15px;
   display: flex;
   flex-flow: column wrap;
 }
 nav h1 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-family: "roboto bold";
-  margin: 20px;
 }
 nav li {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    padding: 40px 50px;
+  }
 }
 
 .functionning__wrapper {
   list-style: none;
 }
-@media screen and (min-width: 480px) and (max-width: 599px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
   .functionning__wrapper {
     display: flex;
     flex-flow: column nowrap;
     margin: 0 20px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .functionning__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+}
 .functionning__btn {
   margin: 20px auto;
   font-family: "roboto medium";
   cursor: pointer;
-  padding: 30px 0px;
-  border-radius: 50px;
   position: relative;
-  width: 400px;
+  padding: 25px 0px;
+  width: 290px;
+  border-radius: 20px;
   background-color: #f6f6f6;
   box-shadow: 0px 10px 20px #dcdada;
   z-index: 1;
 }
-@media screen and (min-width: 480px) and (max-width: 599px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
   .functionning__btn {
     width: 100%;
     flex: 1 1 auto;
@@ -370,24 +386,29 @@ nav li {
   border: solid 1px #9356dc;
   background: #9356dc;
   color: #ffffff;
-  font-size: 1rem;
   border-radius: 100px;
-  padding: 5px 10px;
+  font-size: 0.8rem;
+  padding: 2px 7px;
   position: absolute;
-  left: -13px;
-  top: 27px;
+  left: -10px;
+  top: 23px;
 }
 .functionning__logo {
   color: grey;
   position: absolute;
-  left: 50px;
-  top: 32px;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  left: 25px;
+  top: 25px;
+}
+@media screen and (min-width: 360px) {
+  .functionning__logo {
+    left: 30px;
+  }
 }
 .functionning__title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-family: "roboto bold";
-  margin: 20px;
+  margin-left: 20px;
 }
 @media screen and (min-width: 600px) and (max-width: 757px) {
   .functionning__title {
@@ -407,12 +428,11 @@ nav li {
 
 main {
   background: #f6f6f6;
-  padding: 20px 20px 40px;
+  padding: 40px 15px;
 }
 main h1 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-family: "roboto bold";
-  margin: 20px;
 }
 
 .restaurants__container {
@@ -421,7 +441,7 @@ main h1 {
   flex-flow: column nowrap;
   align-items: center;
 }
-@media screen and (min-width: 480px) and (max-width: 599px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
   .restaurants__container {
     display: flex;
     flex-flow: row wrap;
@@ -436,20 +456,20 @@ main h1 {
   .restaurants__container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1024px) {
   .restaurants__container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
 .restaurants {
   flex: 1;
-  width: 420px;
+  width: 300px;
   border-radius: 20px;
   overflow: hidden;
   margin: 20px;
@@ -458,7 +478,7 @@ main h1 {
   position: relative;
   box-shadow: 0px 10px 20px #dcdada;
 }
-@media screen and (min-width: 480px) and (max-width: 599px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
   .restaurants {
     flex: 1 1 auto;
   }
@@ -471,13 +491,13 @@ main h1 {
 }
 @media screen and (min-width: 758px) and (max-width: 1023px) {
   .restaurants {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     width: 320px;
   }
 }
 @media screen and (min-width: 1024px) {
   .restaurants {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     width: 320px;
   }
 }
@@ -485,19 +505,24 @@ main h1 {
   opacity: 1;
 }
 .restaurants__frame {
-  height: 250px;
+  height: 165px;
   overflow: hidden;
   border-radius: 20px 20px 0px 0px;
 }
-@media screen and (min-width: 480px) and (max-width: 599px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .restaurants__frame {
+    flex: 1 1 auto;
+  }
+}
+@media screen and (min-width: 758px) and (max-width: 1023px) {
   .restaurants__frame {
     flex: 1 1 auto;
   }
 }
 .restaurants__title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-family: "roboto bold";
-  margin: 20px;
+  margin-left: 20px;
 }
 @media screen and (min-width: 600px) and (max-width: 757px) {
   .restaurants__title {
@@ -515,11 +540,11 @@ main h1 {
   }
 }
 .restaurants__img {
-  width: 480px;
-  height: 250px;
+  width: 300px;
+  height: 170px;
   object-fit: cover;
 }
-@media screen and (min-width: 480px) and (max-width: 599px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
   .restaurants__img {
     flex: 1 1 auto;
     width: 100%;
@@ -530,35 +555,30 @@ main h1 {
     width: 540px;
   }
 }
+@media screen and (min-width: 758px) {
+  .restaurants__img {
+    width: 320px;
+  }
+}
 .restaurants__legend {
-  height: 100px;
+  height: 70px;
   text-decoration: none;
 }
 .restaurants h2 {
   font-family: "roboto bold";
-  padding: 20px 15px 0px;
-  font-size: 1.4rem;
+  padding: 15px 15px 0px;
+  font-size: 1rem;
   color: #000000;
 }
 .restaurants__location {
   padding: 0px 15px;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #000000;
 }
 .restaurants__logo {
   position: absolute;
   right: 25px;
-  bottom: 35px;
-  font-size: 1.6rem;
-  width: 25px;
-  color: black;
-  opacity: 1;
-  font-weight: 400;
-  transition: all, 330ms;
-}
-.restaurants__logo:hover {
-  color: yellow;
-  font-weight: 900;
+  bottom: 26px;
 }
 .restaurants__new {
   position: absolute;
@@ -568,11 +588,11 @@ main h1 {
   background: #99e2d0;
   color: #008766;
   border: #99e2d0 1px solid;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 i.far.fa-heart {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   cursor: pointer;
   z-index: 5;
   color: black;
