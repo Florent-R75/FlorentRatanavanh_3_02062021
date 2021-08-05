@@ -19,14 +19,8 @@
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    transform: scale(1);
-  }
   100% {
-    transform: scale(0);
+    opacity: 0;
   }
 }
 @keyframes rotate {
@@ -45,18 +39,23 @@
     opacity: 0;
   }
 }
-@keyframes spinny {
+@keyframes spin {
   0% {
     transform: rotate(0deg);
-    background: #29d;
-  }
-  50% {
-    transform: rotate(180deg);
-    background: #00427c;
   }
   100% {
     transform: rotate(360deg);
-    background: #29d;
+  }
+}
+@keyframes fantome {
+  0% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-999999px);
   }
 }
 * {
@@ -567,12 +566,12 @@ main h1 {
 .restaurants h2 {
   font-family: "roboto bold";
   padding: 15px 15px 0px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #000000;
 }
 .restaurants__location {
   padding: 0px 15px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #000000;
 }
 .restaurants__logo {
@@ -618,24 +617,22 @@ i.far.fa-heart:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  text-align: center;
-  background-color: #99e2d0;
-  animation: loader 6000ms;
-  animation-fill-mode: both;
-  opacity: 0;
+  opacity: 1;
   z-index: 10;
-  font-size: 20vh;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 6000ms forwards, fantome 5000ms both;
 }
-.loader:before {
-  content: "";
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-}
-.loader i {
-  animation: rotate 3000ms;
-  animation-iteration-count: infinite;
+.loader__circle {
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid #99e2d0;
+  width: 120px;
+  height: 120px;
+  opacity: 1;
+  z-index: 10;
+  animation: spin 3s ease-in-out 4, loader 6000ms forwards;
 }
 
 /*# sourceMappingURL=styles.css.map */

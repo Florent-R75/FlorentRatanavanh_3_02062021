@@ -340,13 +340,13 @@ main {
   h2 {
     font-family: $font-secondary;
     padding: 15px 15px 0px;
-    font-size: $font-size-tertiary;
+    font-size: $font-size-secondary;
     color: $color-eighth;
   }
 
   &__location {
     padding: 0px 15px;
-    font-size: $font-size-tertiary;
+    font-size: $font-size-secondary;
     color: $color-eighth;
   }
 
@@ -400,27 +400,24 @@ i.far.fa-heart {
   left: 0;
   right: 0;
   bottom: 0;
-  text-align: center;
 
-  background-color: $color-tertiary;
-  animation: loader 6000ms;
-  animation-fill-mode: both;
-
-  opacity: 0;
+  opacity: 1;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 6000ms forwards, fantome 5000ms both;
 
-  font-size: 20vh;
-  color: white;
+  &__circle {
+    border: 16px solid white;
+    border-radius: 50%;
+    border-top: 16px solid $color-tertiary;
+    width: 120px;
+    height: 120px;
 
-  &:before {
-    content: "";
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-  }
+    opacity: 1;
+    z-index: 10;
 
-  & i {
-    animation: rotate 3000ms;
-    animation-iteration-count: infinite;
+    animation: spin 3s ease-in-out 4, loader 6000ms forwards;
   }
 }

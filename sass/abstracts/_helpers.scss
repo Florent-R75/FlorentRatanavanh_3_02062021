@@ -23,16 +23,8 @@
     opacity: 1;
   }
 
-  50% {
-    opacity: 0;
-  }
-
-  75% {
-    transform: scale(1);
-  }
-
   100% {
-    transform: scale(0);
+    opacity: 0;
   }
 }
 
@@ -56,17 +48,25 @@
   }
 }
 
-@keyframes spinny {
+@keyframes spin {
   0% {
     transform: rotate(0deg);
-    background: #29d;
-  }
-  50% {
-    transform: rotate(180deg);
-    background: #00427c;
   }
   100% {
     transform: rotate(360deg);
-    background: #29d;
+  }
+}
+
+@keyframes fantome {
+  0% {
+    transform: translateX(0);
+  }
+
+  90% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-999999px);
   }
 }
