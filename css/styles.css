@@ -269,10 +269,7 @@ header img {
 .search__input::placeholder {
   color: black;
 }
-.search__input:focus::-webkit-input-placeholder {
-  color: transparent !important;
-}
-.search__input:focus::-moz-placeholder {
+.search__input:focus::placeholder {
   color: transparent !important;
 }
 .search__input:hover .search {
@@ -382,12 +379,11 @@ nav li {
   transition: opacity 250ms;
 }
 .functionning__number {
-  border: solid 1px #9356dc;
   background: #9356dc;
   color: #ffffff;
-  border-radius: 100px;
+  border-radius: 50%;
   font-size: 0.8rem;
-  padding: 2px 7px;
+  padding: 3px 7px;
   position: absolute;
   left: -10px;
   top: 23px;
@@ -583,10 +579,9 @@ main h1 {
   position: absolute;
   right: 15px;
   top: 25px;
-  padding: 5px 10px;
+  padding: 7px 10px;
   background: #99e2d0;
   color: #008766;
-  border: #99e2d0 1px solid;
   font-size: 1rem;
 }
 
